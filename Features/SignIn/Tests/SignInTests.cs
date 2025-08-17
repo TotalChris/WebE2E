@@ -6,7 +6,7 @@ namespace WebE2E.Features.SignIn.Tests
     public class SignInTests : ProductTestFixture
     {
         [ProductTest]
-        public async Task UserCanSignIn()
+        public async Task UserCanSignIn(TestConfig config)
         {
             var signInPage = new SignInPage(Page);
             await signInPage.SignInAsync("TestUser", "Password123!");
